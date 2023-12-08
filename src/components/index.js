@@ -1,2 +1,2 @@
 export { default as Navbar } from "./navber/Navbar";
-export { default as DanceImage } from "./danceImage/DanceImage";
+export { default as Images } from "./danceImage/Images";
