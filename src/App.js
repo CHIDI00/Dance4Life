@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Header, Dance, Form, upComingEvent, Footer } from "./containers";
+import { Header, Dance, Form, UpComingEvent, Footer } from "./containers";
 import { Navbar, Images } from "./components";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
 				<Navbar />
 				<Header />
 			</div>
-			<Images />
-			<upComingEvent />
+			{/* <Images /> */}
+			<UpComingEvent />
 			<Dance />
 			<Form />
 			<Footer />
