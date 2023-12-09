@@ -17,8 +17,10 @@ const Header = () => {
 					</div>
 				</div>
 
-				<div className="d4l__header-container-2"></div>
-				<div className="d4l__header-container-3"></div>
+				<div className="d4l__header-container2">
+					<div className="d4l__header-container-2"></div>
+					<div className="d4l__header-container-3"></div>
+				</div>
 			</div>
 		</div>
 	);
