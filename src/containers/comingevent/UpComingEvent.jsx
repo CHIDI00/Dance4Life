@@ -30,17 +30,17 @@ const UpComingEvent = () => {
 							<p>DAYS</p>
 						</div>
 						<div className="event eventTime_hour">
-							<h1>{hours}</h1>
+							<h1>{hours < 10 ? `0${hours}` : hours}</h1>
 							<p>HOURS</p>
 						</div>
 						<div className="event eventTime_min">
-							<h1>{minutes}</h1>
+							<h1>{minutes < 10 ? `0${minutes}` : minutes}</h1>
 							<p>MINUTES</p>
 						</div>
 						<div className="event eventTime_sec">
-							<h1>{seconds}</h1>
+							<h1>{seconds < 10 ? `0${seconds}` : seconds}</h1>
 							<p>SECONDS</p>
-						</div>{" "}
+						</div>
 					</>
 				) : (
 					<h1>Ticket sale Closed</h1>
@@ -53,6 +53,22 @@ const UpComingEvent = () => {
 					Get Ticket <RiTicket2Fill />
 				</button>
 			</div>
+
+			{/* <div className="d4l__upcomingevent-ticket_payment">
+				<div className="d4l__upcomingevent-form">
+					<input type="email" placeholder="Enter email" />
+					<input type="number" placeholder="Card Number" />
+					<div className="form-cvv">
+						<input type="text" placeholder="MM/YY" />
+						<input type="text" placeholder="CVV" />
+					</div>
+					<select>
+						<option value="$79.99 / person">$79.99 / person</option>
+						<option value="$120 for 2 persons">$120 for 2 persons</option>
+					</select>
+					<button>PAY</button>
+				</div>
+			</div> */}
 		</div>
 	);
 };

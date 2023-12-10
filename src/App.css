@@ -6,7 +6,8 @@
 }
 
 body {
-	background: var(--color-bg);
+	/* position: relative; */
+	background: var(--color-silver);
 }
 
 a {

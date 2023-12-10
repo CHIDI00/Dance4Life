@@ -1,7 +1,8 @@
 .d4l__header {
 	display: flex;
-	height: 88vh;
+	height: 100vh;
 	margin: 0;
+	padding-top: 5rem;
 }
 
 .d4l__header-container {
@@ -88,6 +89,13 @@
 	.d4l__header-container-1_content {
 		padding: 20px 60px;
 	}
+
+	.d4l__header-container-1_content h1 {
+		font-family: var(--font-family-2);
+		font-weight: 900;
+		font-size: 3.7rem;
+		letter-spacing: 4px;
+	}
 }
 
 @media screen and (max-width: 650px) {
@@ -127,8 +135,9 @@
 @media screen and (max-width: 550px) {
 	.d4l__header {
 		display: flex;
-		height: 92vh;
+		height: 100vh;
 		margin: 0;
+		padding-top: 1.5rem;
 	}
 	.d4l__header-container-1 {
 		width: 100%;

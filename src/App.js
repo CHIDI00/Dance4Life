@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Header, Dance, Form, UpComingEvent, Footer } from "./containers";
-import { Navbar, Images } from "./components";
+import { Navbar, Ticket } from "./components";
 
 function App() {
 	return (
@@ -10,11 +10,11 @@ function App() {
 				<Navbar />
 				<Header />
 			</div>
-			{/* <Images /> */}
 			<UpComingEvent />
 			<Dance />
 			<Form />
 			<Footer />
+			{/* <Ticket /> */}
 		</div>
 	);
 }

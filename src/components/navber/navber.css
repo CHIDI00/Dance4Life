@@ -1,9 +1,13 @@
 .d4l__navbar {
+	position: fixed;
+	width: 100%;
+	height: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.8rem 4rem;
+	padding: 0.5rem 4rem;
 	background: var(--color-silver);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .show__menu {
@@ -33,13 +37,13 @@
 }
 
 .links ul li {
-	margin: 0 2rem;
+	margin: 0 1.2rem;
 }
 
 .links ul li a {
 	font-family: var(--font-family-1);
 	font-size: 1.1rem;
-	padding-bottom: 0.6rem;
+	padding-bottom: 0.4rem;
 }
 
 .links ul li a:hover {
@@ -57,13 +61,17 @@
 
 .d4l__navbar-signup p {
 	font-family: var(--font-family-1);
+	font-size: 1rem;
 }
 
 .d4l__navbar-signup button {
-	padding: 0.6rem 0.9rem;
+	width: 100px;
+	height: 50px;
+	padding: 0.3rem 0.8rem;
 	border-radius: 4px;
 	border: none;
 	background: var(--color-dark-orange);
+	font-size: 0.95rem;
 	font-weight: 600;
 	color: #fff;
 	cursor: pointer;
@@ -90,6 +98,7 @@
 	min-height: 400px;
 	width: 250px;
 	z-index: 100;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .d4l__navbar-menu_navlink ul {
@@ -114,6 +123,7 @@
 	.d4l__navbar {
 		display: flex;
 		justify-content: space-between;
+		padding: 1rem 4rem;
 	}
 
 	.links {
@@ -132,7 +142,8 @@
 
 @media screen and (max-width: 550px) {
 	.d4l__navbar {
-		padding: 1rem 1.5rem;
+		padding: 1rem 2rem;
+		height: 60px;
 	}
 
 	.d4l__navbar-logo {
@@ -183,5 +194,6 @@
 		min-height: 95vh;
 		width: 250px;
 		z-index: 100;
+		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
 	}
 }
