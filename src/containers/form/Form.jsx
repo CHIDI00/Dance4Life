@@ -40,7 +40,15 @@ const Form = () => {
 	};
 
 	const handleMessage = function () {
-		if (name === "") {
+		if (
+			name === "" ||
+			age === "" ||
+			!email.includes("@gmail.com") ||
+			email === "" ||
+			cardNumber === "" ||
+			cardExpirationDate === "" ||
+			cardCvv === ""
+		) {
 			setMessageDisplay(
 				<>
 					<p style={{ color: "red" }}>Please enter a valid information</p>
@@ -51,7 +59,7 @@ const Form = () => {
 				<>
 					<p style={{ color: "green" }}>
 						A receipt as been sent to your email. Make sure to print it and
-						bring it along on your start day. Thank you ☺.
+						bring it along on your start day. Thank you 😉.
 					</p>
 				</>
 			);
