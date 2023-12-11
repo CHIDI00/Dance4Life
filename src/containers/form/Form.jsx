@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import danceEvent1 from "../../assets/danceEvent1.jpg";
+import event from "../../assets/event.jpg";
 import "./form.css";
 
 const Form = () => {
@@ -67,7 +69,7 @@ const Form = () => {
 
 		setTimeout(() => {
 			setMessageDisplay("");
-		}, 5000);
+		}, 10000);
 	};
 
 	return (
@@ -96,9 +98,9 @@ const Form = () => {
 				</div>
 			</div>
 
-			<div className="d4l__form-container">
+			<div className="d4l__form-container" id="form">
 				<div className="d4l__form-payment">
-					<form onSubmit={form} id="form">
+					<form onSubmit={form}>
 						<input
 							type="text"
 							placeholder="Fullname"
@@ -143,6 +145,46 @@ const Form = () => {
 				</div>
 
 				<div className="d4l__form-image"></div>
+			</div>
+
+			<TrackEvent />
+		</div>
+	);
+};
+
+const TrackEvent = () => {
+	return (
+		<div className="d4l__trackEvent">
+			<h1>
+				KEEP TRACK OF OUR AMAIZING <br /> UPCOMING EVENT
+			</h1>
+			<div className="trackEvent">
+				<div className="d4l__trackEvent-container">
+					<div
+						className="image-container"
+						style={{ backgroundImage: `url('${danceEvent1}')` }}
+					>
+						<div className="event-date">
+							<h3>16</h3>
+							<p>DEC</p>
+						</div>
+					</div>
+
+					<p className="eventName">Brooklyn Dance Performance</p>
+				</div>
+				<div className="d4l__trackEvent-container">
+					<div
+						className="image-container"
+						style={{ backgroundImage: `url('${event}')` }}
+					>
+						<div className="event-date">
+							<h3>07</h3>
+							<p>MAY</p>
+						</div>
+					</div>
+
+					<p className="eventName">Ukyuko university group dance</p>
+				</div>
 			</div>
 		</div>
 	);
