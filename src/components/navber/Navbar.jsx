@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
+import google from "../../assets/google.jpg";
+import Facebook from "../../assets/Facebook.jpg";
+
 import "./navber.css";
 
 const Links = () => {
@@ -25,6 +28,12 @@ const Links = () => {
 
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
+	const [toggleSignup, setToggleSignup] = useState(false);
+
+	function handleToggles() {
+		setToggleSignup(true);
+		// setToggleMenu(false);
+	}
 
 	return (
 		<div className="d4l__navbar section__padding">
@@ -40,7 +49,15 @@ const Navbar = () => {
 					<p>
 						<a href="#">Buy Ticket</a>
 					</p>
-					<button>SIGN UP</button>
+					<div className="signup_form">
+						<button onClick={() => setToggleSignup(true)}>SIGN UP</button>
+						{toggleSignup && (
+							<Signup
+								toggleSignup={toggleSignup}
+								setToggleSignup={setToggleSignup}
+							/>
+						)}
+					</div>
 				</div>
 
 				<div className="d4l__navbar-menu">
@@ -67,12 +84,77 @@ const Navbar = () => {
 									<p>
 										<a href="#">Buy Ticket</a>
 									</p>
-									<button>SIGN UP</button>
+									<div className="signup_form">
+										<button onClick={() => handleToggles()}>SIGN UP</button>
+										{toggleSignup && (
+											<Signup
+												toggleSignup={toggleSignup}
+												setToggleSignup={setToggleSignup}
+											/>
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
 					)}
 				</div>
+			</div>
+		</div>
+	);
+};
+
+const Signup = function ({ toggleSignup, setToggleSignup }) {
+	return (
+		<div className={`d4l__signup ${toggleSignup ? "active" : ""}`}>
+			<RiCloseLine
+				size={30}
+				style={{
+					position: "absolute",
+					top: "20px",
+					right: "10px",
+					cursor: "pointer",
+				}}
+				onClick={() => setToggleSignup(false)}
+			/>
+			<div className="d4l__form-payment">
+				<form>
+					<h1>SIGN UP</h1>
+					<input
+						type="text"
+						placeholder="Fullname"
+						// value={name}
+						// onChange={(e) => setName(e.target.value)}
+					/>
+					<input
+						type="email"
+						placeholder="Email"
+						// value={email}
+						// onChange={(e) => setEmail(e.target.value)}
+					/>
+					<input
+						type="password"
+						placeholder="Password"
+						// value={cardNumber}
+						// onChange={(e) => setCardNumber(e.target.value)}
+					/>
+
+					<p className="p">sign up with</p>
+
+					<div className="signup_option">
+						<div className="signup_logo">
+							<img src={google} alt="google" />
+						</div>
+
+						<p className="p2">Or</p>
+
+						<div className="signup_logo">
+							<img src={Facebook} alt="google" />
+						</div>
+					</div>
+
+					{/* {messageDisplay} */}
+					<button>SIGN UP</button>
+				</form>
 			</div>
 		</div>
 	);

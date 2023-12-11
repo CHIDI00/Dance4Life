@@ -10,13 +10,8 @@
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.show__menu {
-	transform: translateX(8px);
-	transition: 6s all linear;
-}
-
 .d4l__navbar-logo {
-	font-family: var(--font-family-1);
+	font-family: var(--font-family-3);
 	font-size: 1.3rem;
 	letter-spacing: 2px;
 }
@@ -147,7 +142,6 @@
 	}
 
 	.d4l__navbar-logo {
-		font-family: var(--font-family-1);
 		letter-spacing: 1.5px;
 	}
 
@@ -195,5 +189,114 @@
 		width: 250px;
 		z-index: 100;
 		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+	}
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+.signup_form {
+	position: relative;
+	transition: transform 1s, opacity 0s;
+}
+
+.active {
+	opacity: 1;
+	transform: translateX(-0.4rem);
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+form h1 {
+	font-family: var(--font-family-1);
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+
+form .p {
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+
+.d4l__signup {
+	position: absolute;
+	top: 90px;
+	right: 5px;
+	width: 1350px;
+	height: 85vh;
+	backdrop-filter: blur(8px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.signup_option {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+}
+
+.signup_logo {
+	width: 40%;
+	height: 100%;
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 0.4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.signup_logo img {
+	height: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+	.d4l__signup {
+		right: -65px;
+		width: 800px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.d4l__signup {
+		top: 90px;
+		right: -65px;
+		width: 650px;
+		padding: 0 5rem;
+	}
+}
+@media screen and (max-width: 550px) {
+	form {
+		padding: 1rem;
+	}
+
+	form .p {
+		font-size: 1rem;
+		margin: 0.5rem 0;
+	}
+
+	.signup_option {
+		height: 40px;
+	}
+
+	.signup_logo {
+		border-radius: 10px;
+	}
+
+	.d4l__signup {
+		top: -300px;
+		right: -75px;
+		width: 350px;
+		padding: 0;
 	}
 }
