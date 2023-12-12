@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import google from "../../assets/google.jpg";
 import Facebook from "../../assets/Facebook.jpg";
-import { RiCheckboxCircleFill, RiCloseLine } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
+import SuccessfulMessage from "../successMessage/SuccessfulMessage";
 
 import "./signup.css";
 
@@ -55,10 +56,9 @@ const Signup = function ({
 			setMessage(<>Please enter a valid detail.</>);
 		} else {
 			setMessage(
-				<div className="d4l__successful-signup_container">
-					<RiCheckboxCircleFill size={150} color="green" />
+				<SuccessfulMessage>
 					<h4>Account created successfully.</h4>
-				</div>
+				</SuccessfulMessage>
 			);
 		}
 	}

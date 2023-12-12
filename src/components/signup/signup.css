@@ -71,28 +71,6 @@ form .btn {
 	height: 100%;
 }
 
-.d4l__successful-signup_container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
-	background: #fff;
-	border-radius: 8px;
-}
-
-.d4l__successful-signup_container h4 {
-	font-size: 2rem;
-	text-align: center;
-	color: green;
-	font-family: var(--font-family-1);
-}
-
 @media screen and (max-width: 1050px) {
 	.d4l__signup {
 		right: -65px;

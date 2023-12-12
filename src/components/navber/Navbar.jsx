@@ -3,6 +3,7 @@ import Signup from "../signup/Sign";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 
 import "./navber.css";
+import Ticket from "../ticket/Ticket";
 
 const Links = () => {
 	return (
@@ -29,10 +30,15 @@ const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleSignup, setToggleSignup] = useState(false);
 
+	const [toggleTicket, setToggleTicket] = useState(false);
+
 	return (
 		<div className="d4l__navbar section__padding">
 			<h4 className="d4l__navbar-logo">
 				DANCE4L<span>i</span>FE
+				<div className="buy__ticket">
+					{toggleTicket && <Ticket setToggleTicket={setToggleTicket} />}
+				</div>
 			</h4>
 
 			<div className="d4l__navbar-navlink">
@@ -40,27 +46,18 @@ const Navbar = () => {
 					<Links />
 				</div>
 				<div className="d4l__navbar-signup">
-					<p>
-						<a href="#">Buy Ticket</a>
-					</p>
+					<div className="buy__ticket">
+						<p onClick={() => setToggleTicket(true)}>
+							<a href="#">Buy Ticket</a>
+						</p>
+						{toggleTicket && <Ticket setToggleTicket={setToggleTicket} />}
+					</div>
 					<div className="signup_form">
-						{/* {message ? ( */}
-						{/* "" */}
-						{/* ) : ( */}
 						<button onClick={() => setToggleSignup(true)}>SIGN UP</button>
-						{/* )} */}
 						{toggleSignup && (
 							<Signup
 								toggleSignup={toggleSignup}
 								setToggleSignup={setToggleSignup}
-								// name={name}
-								// setName={setName}
-								// email={email}
-								// setEmail={setEmail}
-								// password={password}
-								// setPassword={setPassword}
-								// message={message}
-								// setMessage={setMessage}
 							/>
 						)}
 					</div>
@@ -87,9 +84,10 @@ const Navbar = () => {
 							<div className="d4l__navbar-menu_navlink">
 								<Links />
 								<div className="d4l__navbar-menu_signup">
-									<p>
-										<a href="">Buy Ticket</a>
+									<p onClick={() => setToggleTicket(true)}>
+										<a href="#">Buy Ticket</a>
 									</p>
+
 									<div className="signup_form">
 										<button onClick={() => setToggleSignup(true)}>
 											SIGN UP
