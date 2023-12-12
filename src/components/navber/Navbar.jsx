@@ -36,7 +36,7 @@ const Navbar = ({ message }) => {
 	return (
 		<div className="d4l__navbar section__padding">
 			<h4 className="d4l__navbar-logo">
-				DANCE4L<span>i</span>FE
+				DANCERS4L<span>i</span>FE
 				<div className="buy__ticket">
 					{toggleTicket && <Ticket setToggleTicket={setToggleTicket} />}
 				</div>

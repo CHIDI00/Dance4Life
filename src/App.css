@@ -5,10 +5,10 @@
 	scroll-behavior: smooth;
 }
 
-body {
-	/* position: relative; */
+/* body {
+	position: relative;
 	background: var(--color-silver);
-}
+} */
 
 a {
 	color: unset;
