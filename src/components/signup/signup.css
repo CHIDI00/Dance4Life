@@ -148,3 +148,11 @@ form .btn {
 		padding: 0;
 	}
 }
+@media screen and (max-width: 376px) {
+	.d4l__signup {
+		top: -300px;
+		right: -46px;
+		width: 350px;
+		padding: 0;
+	}
+}
