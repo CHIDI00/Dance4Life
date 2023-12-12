@@ -73,7 +73,7 @@ const Form = () => {
 	};
 
 	return (
-		<div className="d4l__form section__padding">
+		<div className="d4l__form section__padding" id="form">
 			<h1>
 				Register with us and become a professional dancer within 6 months of
 				learning. Make payment and begin your dance class a day after payment.
@@ -154,7 +154,7 @@ const Form = () => {
 
 const TrackEvent = () => {
 	return (
-		<div className="d4l__trackEvent">
+		<div className="d4l__trackEvent" id="event">
 			<h1>
 				KEEP TRACK OF OUR AMAIZING <br /> UPCOMING EVENT
 			</h1>

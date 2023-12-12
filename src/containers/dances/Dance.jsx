@@ -39,7 +39,7 @@ const danceData = [
 
 const Dance = () => {
 	return (
-		<div className="d4l__dance">
+		<div className="d4l__dance" id="dance">
 			<div className="d4l__dance-header">
 				<h1>OUR CLASSES</h1>
 				<p>

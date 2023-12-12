@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import Signup from "../signup/Sign";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-import google from "../../assets/google.jpg";
-import Facebook from "../../assets/Facebook.jpg";
 
 import "./navber.css";
 
@@ -13,13 +12,13 @@ const Links = () => {
 					<a href="#home">Home</a>
 				</li>
 				<li>
-					<a href="#dance">Dance Style</a>
+					<a href="#dance">Our classes</a>
 				</li>
 				<li>
-					<a href="#home">Events</a>
+					<a href="#form">Register</a>
 				</li>
 				<li>
-					<a href="#home">Blog</a>
+					<a href="#event">Events</a>
 				</li>
 			</ul>
 		</>
@@ -29,11 +28,6 @@ const Links = () => {
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleSignup, setToggleSignup] = useState(false);
-
-	function handleToggles() {
-		setToggleSignup(true);
-		// setToggleMenu(false);
-	}
 
 	return (
 		<div className="d4l__navbar section__padding">
@@ -50,11 +44,23 @@ const Navbar = () => {
 						<a href="#">Buy Ticket</a>
 					</p>
 					<div className="signup_form">
+						{/* {message ? ( */}
+						{/* "" */}
+						{/* ) : ( */}
 						<button onClick={() => setToggleSignup(true)}>SIGN UP</button>
+						{/* )} */}
 						{toggleSignup && (
 							<Signup
 								toggleSignup={toggleSignup}
 								setToggleSignup={setToggleSignup}
+								// name={name}
+								// setName={setName}
+								// email={email}
+								// setEmail={setEmail}
+								// password={password}
+								// setPassword={setPassword}
+								// message={message}
+								// setMessage={setMessage}
 							/>
 						)}
 					</div>
@@ -82,10 +88,12 @@ const Navbar = () => {
 								<Links />
 								<div className="d4l__navbar-menu_signup">
 									<p>
-										<a href="#">Buy Ticket</a>
+										<a href="">Buy Ticket</a>
 									</p>
 									<div className="signup_form">
-										<button onClick={() => handleToggles()}>SIGN UP</button>
+										<button onClick={() => setToggleSignup(true)}>
+											SIGN UP
+										</button>
 										{toggleSignup && (
 											<Signup
 												toggleSignup={toggleSignup}
@@ -98,63 +106,6 @@ const Navbar = () => {
 						</div>
 					)}
 				</div>
-			</div>
-		</div>
-	);
-};
-
-const Signup = function ({ toggleSignup, setToggleSignup }) {
-	return (
-		<div className={`d4l__signup ${toggleSignup ? "active" : ""}`}>
-			<RiCloseLine
-				size={30}
-				style={{
-					position: "absolute",
-					top: "20px",
-					right: "10px",
-					cursor: "pointer",
-				}}
-				onClick={() => setToggleSignup(false)}
-			/>
-			<div className="d4l__form-payment">
-				<form>
-					<h1>SIGN UP</h1>
-					<input
-						type="text"
-						placeholder="Fullname"
-						// value={name}
-						// onChange={(e) => setName(e.target.value)}
-					/>
-					<input
-						type="email"
-						placeholder="Email"
-						// value={email}
-						// onChange={(e) => setEmail(e.target.value)}
-					/>
-					<input
-						type="password"
-						placeholder="Password"
-						// value={cardNumber}
-						// onChange={(e) => setCardNumber(e.target.value)}
-					/>
-
-					<p className="p">sign up with</p>
-
-					<div className="signup_option">
-						<div className="signup_logo">
-							<img src={google} alt="google" />
-						</div>
-
-						<p className="p2">Or</p>
-
-						<div className="signup_logo">
-							<img src={Facebook} alt="google" />
-						</div>
-					</div>
-
-					{/* {messageDisplay} */}
-					<button>SIGN UP</button>
-				</form>
 			</div>
 		</div>
 	);
