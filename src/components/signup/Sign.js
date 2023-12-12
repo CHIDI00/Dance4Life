@@ -5,13 +5,15 @@ import { RiCloseLine } from "react-icons/ri";
 import SuccessfulMessage from "../successMessage/SuccessfulMessage";
 
 import "./signup.css";
+import Navbar from "../navber/Navbar";
 
-const Signup = function ({ toggleSignup, setToggleSignup }) {
+const Signup = function ({ setToggleSignup }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const [message, setMessage] = useState("");
+	<Navbar message={message} />;
 
 	function form(e) {
 		e.preventDefault();

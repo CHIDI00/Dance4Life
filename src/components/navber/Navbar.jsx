@@ -26,11 +26,12 @@ const Links = () => {
 	);
 };
 
-const Navbar = () => {
+const Navbar = ({ message }) => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleSignup, setToggleSignup] = useState(false);
-
 	const [toggleTicket, setToggleTicket] = useState(false);
+
+	// const [message, setMessage] = useState("");
 
 	return (
 		<div className="d4l__navbar section__padding">
@@ -53,11 +54,18 @@ const Navbar = () => {
 						{toggleTicket && <Ticket setToggleTicket={setToggleTicket} />}
 					</div>
 					<div className="signup_form">
-						<button onClick={() => setToggleSignup(true)}>SIGN UP</button>
+						{/* ////////////////////////////////////////////////////// */}
+						{message ? (
+							""
+						) : (
+							<button onClick={() => setToggleSignup(true)}>SIGN UP</button>
+						)}
 						{toggleSignup && (
 							<Signup
 								toggleSignup={toggleSignup}
 								setToggleSignup={setToggleSignup}
+								// message={message}
+								// setMessage={setMessage}
 							/>
 						)}
 					</div>
@@ -89,9 +97,14 @@ const Navbar = () => {
 									</p>
 
 									<div className="signup_form">
-										<button onClick={() => setToggleSignup(true)}>
-											SIGN UP
-										</button>
+										{/* ////////////////////////////////////////////////////// */}
+										{message ? (
+											""
+										) : (
+											<button onClick={() => setToggleSignup(true)}>
+												SIGN UP
+											</button>
+										)}
 										{toggleSignup && (
 											<Signup
 												toggleSignup={toggleSignup}
