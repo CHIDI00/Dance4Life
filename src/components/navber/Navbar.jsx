@@ -5,20 +5,20 @@ import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import "./navber.css";
 import Ticket from "../ticket/Ticket";
 
-const Links = () => {
+const Links = ({ closeMenu }) => {
 	return (
 		<>
 			<ul>
-				<li>
+				<li onClick={closeMenu}>
 					<a href="#home">Home</a>
 				</li>
-				<li>
+				<li onClick={closeMenu}>
 					<a href="#dance">Our classes</a>
 				</li>
-				<li>
+				<li onClick={closeMenu}>
 					<a href="#form">Register</a>
 				</li>
-				<li>
+				<li onClick={closeMenu}>
 					<a href="#event">Events</a>
 				</li>
 			</ul>
@@ -30,6 +30,14 @@ const Navbar = ({ message }) => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleSignup, setToggleSignup] = useState(false);
 	const [toggleTicket, setToggleTicket] = useState(false);
+
+	function closeMenu() {
+		setToggleMenu(false);
+	}
+
+	function setToggleMenuFunction() {
+		setToggleSignup(true);
+	}
 
 	// const [message, setMessage] = useState("");
 
@@ -90,7 +98,7 @@ const Navbar = ({ message }) => {
 					{toggleMenu && (
 						<div className="d4l__navbar-menu_container">
 							<div className="d4l__navbar-menu_navlink">
-								<Links />
+								<Links closeMenu={closeMenu} />
 								<div className="d4l__navbar-menu_signup">
 									<p onClick={() => setToggleTicket(true)}>
 										<a href="#">Buy Ticket</a>
@@ -101,7 +109,12 @@ const Navbar = ({ message }) => {
 										{message ? (
 											""
 										) : (
-											<button onClick={() => setToggleSignup(true)}>
+											<button
+												onClick={() => {
+													setToggleMenuFunction();
+													// closeMenu();
+												}}
+											>
 												SIGN UP
 											</button>
 										)}
