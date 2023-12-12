@@ -53,22 +53,6 @@ const UpComingEvent = () => {
 					Get Ticket <RiTicket2Fill />
 				</button>
 			</div>
-
-			{/* <div className="d4l__upcomingevent-ticket_payment">
-				<div className="d4l__upcomingevent-form">
-					<input type="email" placeholder="Enter email" />
-					<input type="number" placeholder="Card Number" />
-					<div className="form-cvv">
-						<input type="text" placeholder="MM/YY" />
-						<input type="text" placeholder="CVV" />
-					</div>
-					<select>
-						<option value="$79.99 / person">$79.99 / person</option>
-						<option value="$120 for 2 persons">$120 for 2 persons</option>
-					</select>
-					<button>PAY</button>
-				</div>
-			</div> */}
 		</div>
 	);
 };

@@ -84,7 +84,7 @@ const Form = () => {
 					<h3>Salsa Dance & Ballroom Dance</h3>
 					<p>Start learning at just </p>
 					<p>
-						$150 <span>$200</span>
+						$150 <span>$190</span>
 					</p>
 					<a href="#form">Proceed to registration</a>
 				</div>
@@ -92,7 +92,7 @@ const Form = () => {
 					<h3>HipHop Dance & Line dance</h3>
 					<p>Start learning at just </p>
 					<p>
-						$150 <span>$200</span>
+						$210 <span>$250</span>
 					</p>
 					<a href="#form">Proceed to registration</a>
 				</div>

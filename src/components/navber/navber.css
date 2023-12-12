@@ -112,6 +112,12 @@
 	font-family: var(--font-family-1);
 }
 
+.d4l__navbar-menu_navlink ul li a:hover {
+	color: var(--color-red);
+	border-bottom: 2px solid var(--color-red);
+	transition: 0.2s all ease-in-out;
+}
+
 .d4l__navbar-menu_signup {
 	display: none;
 }
@@ -161,8 +167,12 @@
 
 	.d4l__navbar-menu_signup p {
 		font-family: var(--font-family-1);
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		margin-bottom: 1rem;
+	}
+
+	.d4l__navbar-menu_navlink ul li a {
+		font-size: 1.1rem;
 	}
 
 	.d4l__navbar-menu_signup button {

@@ -6,18 +6,7 @@ import SuccessfulMessage from "../successMessage/SuccessfulMessage";
 
 import "./signup.css";
 
-const Signup = function ({
-	toggleSignup,
-	setToggleSignup,
-	// name,
-	// setName,
-	// email,
-	// setEmail,
-	// password,
-	// setPassword,
-	// message,
-	// setMessage,
-}) {
+const Signup = function ({ toggleSignup, setToggleSignup }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -74,7 +63,7 @@ const Signup = function ({
 					cursor: "pointer",
 					padding: "2px",
 					background: "#fff",
-					borderRadius: "2px",
+					borderRadius: "50px",
 				}}
 				onClick={() => setToggleSignup(false)}
 			/>

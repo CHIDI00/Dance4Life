@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
 
 const Footer = () => {
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+
+	function handleSubmit() {
+		setTimeout(() => {
+			setEmail("");
+			handleMessage();
+		}, 1000);
+	}
+
+	function handleMessage() {
+		if (!email.includes("@gmail.com") || email === "") {
+			setMessage("Enter a valid email address");
+		} else if (email.includes("@gmail.com") || email !== "") {
+			setMessage("Email has been received for news and updates.");
+		} else {
+			setMessage("Subscribe to our news and update");
+		}
+	}
+
 	return (
 		<div className="d4l__footer section__padding">
 			<div className="d4l__footer-container">
@@ -50,11 +70,17 @@ const Footer = () => {
 
 					<div className="d4l__footer-newsupdate grid">
 						<div className="email-container">
-							<div className="email">
-								<input type="email" placeholder="Enter email address" />
-								<button>Subscribe</button>
-							</div>
 							<p>Subscribe to our news and update</p>
+							<div className="email">
+								<input
+									type="email"
+									placeholder="Enter email address"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+								/>
+								<button onClick={handleSubmit}>Subscribe</button>
+							</div>
+							<p>{message}</p>
 						</div>
 					</div>
 				</div>

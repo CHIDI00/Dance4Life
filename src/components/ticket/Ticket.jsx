@@ -20,14 +20,24 @@ const Ticket = ({ setToggleTicket, setToggleTicket2 }) => {
 			setCvv("");
 			setEmail("");
 
-			handleSubmit();
+			handleMessage();
 		}, 1500);
 	}
 
 	function handleSubmit() {
+		setTimeout(() => {
+			setCardNumber("");
+			setMMYY("");
+			setCvv("");
+			setEmail("");
+
+			handleMessage();
+		}, 1500);
+	}
+
+	function handleMessage() {
 		if (
 			cardNumber === "" ||
-			cardNumber !== "number" ||
 			mmyy === "" ||
 			cvv === "" ||
 			email === "" ||
@@ -37,7 +47,7 @@ const Ticket = ({ setToggleTicket, setToggleTicket2 }) => {
 		} else {
 			setSuccess(
 				<SuccessfulMessage>
-					<h4>Payment successfull. See you at the event.</h4>
+					<h4>Payment successfull. See you at the event 😉.</h4>
 				</SuccessfulMessage>
 			);
 		}
@@ -63,7 +73,7 @@ const Ticket = ({ setToggleTicket, setToggleTicket2 }) => {
 				onClick={() => handleCloseBtn()}
 			/>
 			<div className="d4l__ticket-container">
-				{handleSubmit ? (
+				{handleMessage ? (
 					<div className="d4l__ticket-payment">
 						<h3>Payment</h3>
 						<form className="ticket_form" onSubmit={handleForm}>
