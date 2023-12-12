@@ -99,7 +99,7 @@ const Ticket = ({ setToggleTicket, setToggleTicket2 }) => {
 							</div>
 							<select>
 								<option value="$200 / person">$200 / person</option>
-								<option value="$280 for 2">$200 for 2</option>
+								<option value="$280 for 2">$280 for 2</option>
 							</select>
 							<input
 								type="email"
