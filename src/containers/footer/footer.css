@@ -33,9 +33,9 @@
 	letter-spacing: 3px;
 	font-size: 1.5rem;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	gap: 8px;
+	gap: 7px;
 	height: 30px;
 }
 
