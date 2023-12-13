@@ -15,7 +15,16 @@
 	font-family: var(--font-family-3);
 	font-size: 1.3rem;
 	letter-spacing: 2px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 	/* position: relative; */
+}
+
+.d4l__navbar-logo img {
+	width: 30px;
 }
 
 .d4l__navbar-logo span {

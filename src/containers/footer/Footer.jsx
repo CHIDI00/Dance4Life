@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import d4llogo from "../../assets/d4llogo.png";
 import "./footer.css";
 
 const Footer = () => {
@@ -28,7 +29,8 @@ const Footer = () => {
 				<div className="d4l__footer-container_links">
 					<div className="d4l__footer-logo grid">
 						<h1>
-							<a href="#">
+							<img src={d4llogo} alt="logo" />
+							<a href="#home">
 								DANCERS4L<span>i</span>FE
 							</a>
 						</h1>

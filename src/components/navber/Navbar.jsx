@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Signup from "../signup/Sign";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-
-import "./navber.css";
+import d4llogo from "../../assets/d4llogo.png";
 import Ticket from "../ticket/Ticket";
+import "./navber.css";
 
 const Links = ({ closeMenu }) => {
 	return (
@@ -44,6 +44,7 @@ const Navbar = ({ message }) => {
 	return (
 		<div className="d4l__navbar section__padding">
 			<h4 className="d4l__navbar-logo">
+				<img src={d4llogo} alt="logo" />
 				DANCERS4L<span>i</span>FE
 				<div className="buy__ticket">
 					{toggleTicket && <Ticket setToggleTicket={setToggleTicket} />}
