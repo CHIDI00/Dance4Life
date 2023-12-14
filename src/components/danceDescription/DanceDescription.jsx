@@ -20,7 +20,7 @@ const descriptionData = [
 	{
 		danceName: "Ballroom Dance",
 		description:
-			"Ballroom dance is a partner dance that encompasses a variety of elegant and formal dance styles. It is typically performed in pairs, with each partner assuming specific roles and positions. Ballroom dance includes a range of dances such as the waltz, tango, foxtrot, and quickstep, each with its own unique characteristics and tempo. Known for its emphasis on posture, frame, and precise footwork, ballroom dance is often associated with social events, competitions, and a timeless sense of glamour. Participants engage in graceful and coordinated movements, creating a captivating and refined display of dance artistry",
+			"Ballroom dance is a partner dance that encompasses a variety of elegant and formal dance styles. It is typically performed in pairs, with each partner assuming specific roles and positions. Ballroom dance includes a range of dances such as the waltz, tango, foxtrot, and quickstep, each with its own unique characteristics and tempo. Known for its emphasis on posture, frame, and precise footwork, ballroom dance is often associated with social events, competitions, and a timeless sense of glamour. Participants engage in graceful and coordinated movements, creating a captivating and refined display of dance artistry.",
 	},
 ];
 

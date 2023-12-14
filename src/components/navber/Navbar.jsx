@@ -26,7 +26,7 @@ const Links = ({ closeMenu }) => {
 	);
 };
 
-const Navbar = ({ message }) => {
+const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleSignup, setToggleSignup] = useState(false);
 	const [toggleTicket, setToggleTicket] = useState(false);
@@ -35,11 +35,7 @@ const Navbar = ({ message }) => {
 		setToggleMenu(false);
 	}
 
-	function setToggleMenuFunction() {
-		setToggleSignup(true);
-	}
-
-	// const [message, setMessage] = useState("");
+	const [message, setMessage] = useState("");
 
 	return (
 		<div className="d4l__navbar section__padding">
@@ -73,8 +69,8 @@ const Navbar = ({ message }) => {
 							<Signup
 								toggleSignup={toggleSignup}
 								setToggleSignup={setToggleSignup}
-								// message={message}
-								// setMessage={setMessage}
+								message={message}
+								setMessage={setMessage}
 							/>
 						)}
 					</div>
@@ -112,8 +108,7 @@ const Navbar = ({ message }) => {
 										) : (
 											<button
 												onClick={() => {
-													setToggleMenuFunction();
-													// closeMenu();
+													setToggleSignup(true);
 												}}
 											>
 												SIGN UP

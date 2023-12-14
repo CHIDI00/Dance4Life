@@ -48,7 +48,7 @@ const UpComingEvent = () => {
 			</div>
 
 			<div className="d4l__upcomingevent-getTicket">
-				<p>Get ticket t access the event</p>
+				<p>Get access the event</p>
 				<button disabled={hours === 0 ? "true" : "false"}>
 					Get Ticket <RiTicket2Fill />
 				</button>

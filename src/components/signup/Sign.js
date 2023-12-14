@@ -7,13 +7,13 @@ import SuccessfulMessage from "../successMessage/SuccessfulMessage";
 import "./signup.css";
 import Navbar from "../navber/Navbar";
 
-const Signup = function ({ setToggleSignup }) {
+const Signup = function ({ setToggleSignup, message, setMessage }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	const [message, setMessage] = useState("");
-	<Navbar message={message} />;
+	// const [message2, setMessage2] = useState("");
+	// <Navbar message={message} />;
 
 	function form(e) {
 		e.preventDefault();
@@ -45,12 +45,18 @@ const Signup = function ({ setToggleSignup }) {
 			password === ""
 		) {
 			setMessage(<>Please enter a valid detail.</>);
+			// setMessage2(<>Please enter a valid detail.</>);
 		} else {
 			setMessage(
 				<SuccessfulMessage>
 					<h4>Account created successfully.</h4>
 				</SuccessfulMessage>
 			);
+			// setMessage2(
+			// 	<SuccessfulMessage>
+			// 		<h4>Account created successfully.</h4>
+			// 	</SuccessfulMessage>
+			// );
 		}
 	}
 
@@ -97,6 +103,7 @@ const Signup = function ({ setToggleSignup }) {
 							style={{ color: "red", fontSize: "0.8rem", margin: "0px" }}
 						>
 							{message}
+							{/* {message2} */}
 						</p>
 						<p className="p">sign up with</p>
 
